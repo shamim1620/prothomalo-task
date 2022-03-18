@@ -10,3 +10,19 @@
     width: 20%;
     height: 40px;
 }
+.container{
+    display: grid;
+    margin: 0 50px;
+    grid-template-columns: auto auto auto auto;
+}
+.top-section{
+    background-color: aqua;
+    grid-column: 1/span 2;
+}
+// .vertical-section{
+//     grid-row: auto/span 4;
+// }
+// .footer-section{
+//     grid-column: 1/-1;
+//     background-color: blueviolet;
+// }
