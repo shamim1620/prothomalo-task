@@ -15,12 +15,33 @@
   display: -ms-grid;
   display: grid;
   margin: 0 50px;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
 }
 
-.top-section {
-  background-color: aqua;
+.container p {
+  font-size: 1.75ch;
+  color: #9c9fa1;
+}
+
+.main-section {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/span 3;
+}
+
+.row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  text-align: start;
+  border-bottom: 1px solid #ccc2c2;
+}
+
+.top-news {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/span 2;

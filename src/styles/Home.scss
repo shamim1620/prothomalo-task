@@ -13,12 +13,31 @@
 .container{
     display: grid;
     margin: 0 50px;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat((4,1fr));
+    grid-gap: 10px;
+    
+    
 }
-.top-section{
-    background-color: aqua;
+.container p{
+    font-size: 1.75ch;
+    color: rgb(156, 159, 161);
+
+}
+.main-section{
+    grid-column: 1/span 3;
+    
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    text-align: start;
+    border-bottom: 1px solid rgb(204, 194, 194);
+}
+.top-news{
     grid-column: 1/span 2;
 }
+
 // .vertical-section{
 //     grid-row: auto/span 4;
 // }
