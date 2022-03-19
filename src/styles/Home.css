@@ -25,6 +25,10 @@
   color: #0044ff;
 }
 
+.container h1:hover {
+  color: #0044ff;
+}
+
 .container p {
   font-size: 1.75ch;
   color: #9c9fa1;
@@ -60,13 +64,46 @@
   height: 100%;
 }
 
+.second-top-news {
+  padding-left: 10px;
+  border-left: 1px solid #ccc3c3;
+}
+
 .top-right-ads {
   margin: 10px;
   padding-bottom: 18px;
   border-bottom: 1px solid #ccc3c3;
 }
 
+.right-colum-news {
+  margin: 10px;
+  border-bottom: 1px solid #ccc3c3;
+}
+
+.right-colum-news img {
+  width: 100%;
+}
+
+.today-newspaper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  border-top: 1px solid #ccc3c3;
+  text-align: start;
+}
+
 .bottom-ads img {
   width: 70%;
+}
+
+footer {
+  margin: 0px 40px;
 }
 /*# sourceMappingURL=Home.css.map */

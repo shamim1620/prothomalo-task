@@ -20,6 +20,9 @@
 .container h4:hover{
     color:rgb(0, 68, 255);
 }
+.container h1:hover{
+    color:rgb(0, 68, 255);
+}
 .container p{
     font-size: 1.75ch;
     color: rgb(156, 159, 161);
@@ -48,11 +51,34 @@
     width: 100%;
     height: 100%;
 }
+.second-top-news{
+    padding-left: 10px;
+    border-left: 1px solid rgb(204, 195, 195);
+}
 .top-right-ads{
     margin: 10px;
     padding-bottom: 18px;
     border-bottom: 1px solid rgb(204, 195, 195) ;
 }
+.right-colum-news{
+    margin: 10px;
+    border-bottom: 1px solid rgb(204, 195, 195);
+}
+.right-colum-news img{
+ width: 100%;
+}
+.today-newspaper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-top: 1px solid rgb(204, 195, 195);
+    text-align: start;
+
+}
 .bottom-ads img{
     width: 70%;
+}
+footer{
+margin: 0px 40px;
 }
