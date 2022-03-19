@@ -4,27 +4,28 @@ import '../../styles/Home.css';
 import Card from '../Card/Card';
 import nogod from '../../image/nogod-ads.PNG'
 import rupayan from '../../image/rupayan-ads.PNG';
-import TopNews from '../TopNews/TopNews';
+
 
 const Home = () => {
 
     const [data, setData] = useState([]);
-    const [second, setSecond] = useState();
+
+    //fetch data from json file
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => {
                 setData(data)
-                const second = data.find(({ sort }) => sort === 2)
-                setSecond(second);
 
             })
     }, [])
-
-    const topNewsFirst = data.find(({ id }) => id === '9730adec');
-    const secondNews = data.filter(({ sort }) => sort > 2 && sort < 6);
+    //data divide by sort priority
+    const topNewsFirst = data.find(({ sort }) => sort=== 1);
+    const topNewsSecond = data.find(({ sort }) => sort === 2)
+    const secondRowNews = data.filter(({ sort }) => sort > 2 && sort < 6);
     const thirdNews = data.filter(({ sort }) => sort > 5 && sort < 12);
-    console.log(data)
+
+    
 
     return (
         <div>
@@ -37,18 +38,25 @@ const Home = () => {
                     <div className='row'>
                         <div className='top-news'>
                             {
-                                topNewsFirst && <TopNews
-                                    topNewsFirst={topNewsFirst}
-                                ></TopNews>
+                                topNewsFirst && <>
+                                    <h1>{topNewsFirst.title}</h1>
+                                    <p>{topNewsFirst.description.substring(0, 100)} ...</p>
+                                    <time>{topNewsFirst.time}</time>
+                                </>
+                            }
+                        </div>
+                        <div className='top-news'>
+                            {
+                                topNewsFirst && <img src={topNewsFirst.photo} alt=""></img>
                             }
                         </div>
 
                         <div>
                             {
-                                second && <>
-                                    <h4>{second.title}</h4>
-                                    <p>{second.description.substring(0, 100)} ...</p>
-                                    <time>{second.time}</time>
+                                topNewsSecond && <>
+                                    <h4>{topNewsSecond.title}</h4>
+                                    <p>{topNewsSecond.description.substring(0, 100)} ...</p>
+                                    <time>{topNewsSecond.time}</time>
                                 </>
                             }
                         </div>
@@ -56,7 +64,7 @@ const Home = () => {
                     <hr />
                     <div className='row'>
                         {
-                            secondNews.map(news => <>
+                            secondRowNews.map(news => <>
                                 <div>
                                     <h4>{news.title}</h4>
                                     <p>{news.description.substring(0, 100)} ...</p>
@@ -87,21 +95,19 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='side-section'>
-                    <div>
+                    <div className='top-right-ads'>
                         <img src={nogod} alt=''></img>
                     </div>
+                    
                     <div>
 
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='bottom-ads'>
                 <img src={rupayan} alt=""></img>
             </div>
-            <hr/>
-            <div>
-
-            </div>
+            <hr />
         </div >
     );
 };

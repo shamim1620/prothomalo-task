@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;CAC1B;;AACD,AAAA,SAAS,CAAC,GAAG,CAAA;EACT,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,GAAG;CACd",
-    "sources": [
-        "TopNews.scss"
-    ],
-    "names": [],
-    "file": "TopNews.css"
-}
