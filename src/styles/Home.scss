@@ -12,11 +12,10 @@
 }
 .container{
     display: grid;
-    margin: 0 50px;
+    margin: 10px 50px;
+    padding-bottom: 10px;
     grid-template-columns: repeat((4,1fr));
-    grid-gap: 10px;
-    
-    
+    border-bottom: 1px solid rgb(204, 194, 194);
 }
 .container p{
     font-size: 1.75ch;
@@ -27,12 +26,16 @@
     grid-column: 1/span 3;
     
 }
+.side-section{
+    margin-left: 5px;
+    border-left: 1px solid rgb(204, 194, 194);
+}
 .row{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
     text-align: start;
-    border-bottom: 1px solid rgb(204, 194, 194);
+    //  border-bottom: 1px solid rgb(204, 194, 194);
 }
 .top-news{
     grid-column: 1/span 2;

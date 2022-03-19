@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../../prothomalo-logo.png';
-import '../../styles/Home.css'
-
+import logo from '../../image/prothomalo-logo.png';
+import '../../styles/Home.css';
+import Card from '../Card/Card';
+import nogod from '../../image/nogod-ads.PNG'
+import rupayan from '../../image/rupayan-ads.PNG';
 import TopNews from '../TopNews/TopNews';
 
 const Home = () => {
@@ -21,9 +23,8 @@ const Home = () => {
 
     const topNewsFirst = data.find(({ id }) => id === '9730adec');
     const secondNews = data.filter(({ sort }) => sort > 2 && sort < 6);
-
-
-    console.log(secondNews);
+    const thirdNews = data.filter(({ sort }) => sort > 5 && sort < 12);
+    console.log(data)
 
     return (
         <div>
@@ -32,12 +33,6 @@ const Home = () => {
             </div>
             <div className='container'>
 
-                {/* {
-                    data.map(news => <Card
-                        news={news}
-                        key={news.id}
-                    ></Card>)
-                } */}
                 <div className='main-section'>
                     <div className='row'>
                         <div className='top-news'>
@@ -58,6 +53,7 @@ const Home = () => {
                             }
                         </div>
                     </div>
+                    <hr />
                     <div className='row'>
                         {
                             secondNews.map(news => <>
@@ -69,8 +65,42 @@ const Home = () => {
                             </>)
                         }
                     </div>
+                    <hr />
+                    <div className='row'>
+                        {
+                            thirdNews.slice(0, 3).map(news => <Card
+                                news={news}
+                                key={news.id}
+                            ></Card>)
+
+                        }
+                    </div>
+                    <hr />
+                    <div className='row'>
+                        {
+                            thirdNews.slice(3, 6).map(news => <Card
+                                news={news}
+                                key={news.id}
+                            ></Card>)
+
+                        }
+                    </div>
                 </div>
-                <div className='side-section'>2</div>
+                <div className='side-section'>
+                    <div>
+                        <img src={nogod} alt=''></img>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src={rupayan} alt=""></img>
+            </div>
+            <hr/>
+            <div>
+
             </div>
         </div >
     );

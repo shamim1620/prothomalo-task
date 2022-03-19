@@ -14,10 +14,11 @@
 .container {
   display: -ms-grid;
   display: grid;
-  margin: 0 50px;
+  margin: 10px 50px;
+  padding-bottom: 10px;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  border-bottom: 1px solid #ccc2c2;
 }
 
 .container p {
@@ -31,6 +32,11 @@
   grid-column: 1/span 3;
 }
 
+.side-section {
+  margin-left: 5px;
+  border-left: 1px solid #ccc2c2;
+}
+
 .row {
   display: -ms-grid;
   display: grid;
@@ -38,7 +44,6 @@
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 5px;
   text-align: start;
-  border-bottom: 1px solid #ccc2c2;
 }
 
 .top-news {
