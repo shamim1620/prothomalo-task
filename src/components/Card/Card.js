@@ -14,9 +14,11 @@ const Card = ({ news }) => {
                     <h4>{title}</h4>
                 </div>
             </div>
-            <Moment format="lll" locale='bn-bd'>
-                {time}
-            </Moment>
+            <small>
+                <Moment format="lll" locale='bn-bd'>
+                    {time}
+                </Moment>
+            </small>
         </div>
 
     );

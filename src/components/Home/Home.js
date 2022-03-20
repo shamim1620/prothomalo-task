@@ -44,9 +44,11 @@ const Home = () => {
                                 topNewsFirst && <>
                                     <h1>{topNewsFirst.title}</h1>
                                     <p>{topNewsFirst.description.substring(0, 100)} ...</p>
-                                    <Moment format="lll" locale='bn-bd'>
-                                        {topNewsFirst.time}
-                                    </Moment>
+                                    <small>
+                                        <Moment format="lll" locale='bn-bd'>
+                                            {topNewsFirst.time}
+                                        </Moment>
+                                    </small>
                                 </>
                             }
                         </div>
@@ -61,9 +63,11 @@ const Home = () => {
                                 topNewsSecond && <>
                                     <h4>{topNewsSecond.title}</h4>
                                     <p>{topNewsSecond.description.substring(0, 100)} ...</p>
-                                    <Moment format="lll" locale='bn-bd'>
-                                        {topNewsSecond.time}
-                                    </Moment>
+                                    <small>
+                                        <Moment format="lll" locale='bn-bd'>
+                                            {topNewsSecond.time}
+                                        </Moment>
+                                    </small>
                                 </>
                             }
                         </div>
@@ -75,9 +79,11 @@ const Home = () => {
                                 <div>
                                     <h4>{news.title}</h4>
                                     <p>{news.description.substring(0, 100)} ...</p>
-                                    <Moment format="lll" locale='bn-bd'>
-                                        {news.time}
-                                    </Moment>
+                                    <small>
+                                        <Moment format="lll" locale='bn-bd'>
+                                            {news.time}
+                                        </Moment>
+                                    </small>
                                 </div>
                             </>)
                         }
