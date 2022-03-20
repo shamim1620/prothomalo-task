@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 import '../../styles/Card.css';
 
 const Card = ({ news }) => {
@@ -13,7 +14,9 @@ const Card = ({ news }) => {
                     <h4>{title}</h4>
                 </div>
             </div>
-            <time>{time}</time>
+            <Moment format="lll" locale='bn-bd'>
+                {time}
+            </Moment>
         </div>
 
     );

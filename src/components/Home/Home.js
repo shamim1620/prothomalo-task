@@ -5,6 +5,9 @@ import Card from '../Card/Card';
 import nogod from '../../image/nogod-ads.PNG'
 import rupayan from '../../image/rupayan-ads.PNG';
 import newspaper from '../../image/newspaper.PNG';
+import Moment from 'react-moment';
+import 'moment/locale/bn-bd';
+
 
 
 const Home = () => {
@@ -27,7 +30,6 @@ const Home = () => {
     const topNewsSecond = data.find(({ sort }) => sort === 2)
 
 
-    console.log(data)
 
     return (
         <div>
@@ -42,7 +44,9 @@ const Home = () => {
                                 topNewsFirst && <>
                                     <h1>{topNewsFirst.title}</h1>
                                     <p>{topNewsFirst.description.substring(0, 100)} ...</p>
-                                    <time>{topNewsFirst.time}</time>
+                                    <Moment format="lll" locale='bn-bd'>
+                                        {topNewsFirst.time}
+                                    </Moment>
                                 </>
                             }
                         </div>
@@ -57,7 +61,9 @@ const Home = () => {
                                 topNewsSecond && <>
                                     <h4>{topNewsSecond.title}</h4>
                                     <p>{topNewsSecond.description.substring(0, 100)} ...</p>
-                                    <time>{topNewsSecond.time}</time>
+                                    <Moment format="lll" locale='bn-bd'>
+                                        {topNewsSecond.time}
+                                    </Moment>
                                 </>
                             }
                         </div>
@@ -69,7 +75,9 @@ const Home = () => {
                                 <div>
                                     <h4>{news.title}</h4>
                                     <p>{news.description.substring(0, 100)} ...</p>
-                                    <time>{news.time}</time>
+                                    <Moment format="lll" locale='bn-bd'>
+                                        {news.time}
+                                    </Moment>
                                 </div>
                             </>)
                         }
