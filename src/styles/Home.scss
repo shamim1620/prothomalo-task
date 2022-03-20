@@ -14,8 +14,9 @@
     display: grid;
     margin: 10px 50px;
     padding-bottom: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
     border-bottom: 1px solid rgb(204, 194, 194);
+    grid-auto-flow: dense;
 }
 .container h4:hover{
     color:rgb(0, 68, 255);
@@ -38,7 +39,7 @@
 }
 .row{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
     grid-column-gap: 10px;
     text-align: start;
     padding-bottom: 10px;
@@ -82,3 +83,15 @@
 footer{
 margin: 0px 40px;
 }
+
+@media screen and (max-width: 890px) {
+    .row{
+        display: block;
+    }
+    .container{
+        display: block;
+    }
+    .side-section{
+        border-left: 0px;    
+    }
+  }
